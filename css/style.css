@@ -1,0 +1,556 @@
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-cyrillic_latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-cyrillic_latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 900;
+  src: url("../fonts/roboto-v30-cyrillic_latin-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Charm";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/charm-v11-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Charm";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/charm-v11-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Marck Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/marck-script-v20-cyrillic_latin_latin-ext-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --body-background-color: #f5f7df;
+  --dark-text-color: #0c0c0c;
+  --white-text-color: #ffffff;
+  --menu-text-color: #748a05f4;
+  --text-shadow: 4px 4px rgba(55, 65, 1, 0.651);
+  --primary-color: #febe10;
+  --available-color: #818c2b;
+  --not-available-color: #ff7300;
+  --grin-background-color: #e5fcaf;
+  --footer-background-color: rgba(116, 138, 5, 0.957);
+  --info-background-color: #f5f7df;
+  --box-shadow: 0px 0px 20px #494949;
+  --footer-background-color: #748a05;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--body-background-color);
+}
+
+/*===== Banner ====*/
+.banner {
+  background-size: cover;
+  width: 100%;
+  height: 58vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.banner-text h2 {
+  color: var(--primary-color);
+  font-size: 76px;
+  /* font-family: "Charm"; */
+  font-family: "Marck Script";
+  margin-top: 100px;
+  text-shadow: var(--text-shadow);
+}
+.banner-products h3 {
+  color: var(--primary-color);
+  font-size: 54px;
+  /* font-family: "Charm"; */
+  font-family: "Marck Script";
+  margin-bottom: 20px;
+  text-shadow: var(--text-shadow);
+}
+
+/*===== Products =====*/
+.products-cards {
+  width: 100%;
+  background-color: var(--grin-background-color);
+}
+.container-products {
+  width: 98%;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 30px;
+}
+.products {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--white-text-color);
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 16);
+  color: #0c0c0c;
+  border-radius: 20px;
+  /* flex-basis: calc((100% - 40px) / 4); */
+  flex: 1 1 1px;
+  transition: transform 0.3s;
+}
+.products:hover {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.01);
+}
+.products h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.products p {
+  font-weight: 400;
+  font-size: 20px;
+}
+.products img {
+  width: 320px;
+}
+.products-photo {
+  text-align: center;
+}
+.available {
+  color: var(--available-color);
+}
+.not-available {
+  color: var(--not-available-color);
+}
+
+/*===== Assortment products =====*/
+.assortment-section {
+  width: 100%;
+  background-color: #f1f3ed;
+}
+.container-assortment {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--body-background-color);
+}
+.assortment-titles {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.assortment-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 20px;
+}
+.assortment-titles h2 {
+  color: var(--dark-text-color);
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.assortment-text h3 {
+  color: var(--dark-text-color);
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.topic {
+  background-color: var(--white-text-color);
+}
+.topic h2,
+.topic p,
+.topic a {
+  text-align: center;
+}
+.topic h2 {
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  font-weight: 500;
+}
+.topic p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(26 / 20);
+}
+.topic-sweets {
+  text-align: center;
+  margin-top: 10px;
+}
+.another {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 18px;
+  margin: 0px 20px;
+  padding-bottom: 30px;
+}
+.another a {
+  text-decoration: none;
+}
+.another img {
+  width: 80%;
+  height: 26vh;
+  border-radius: 10px;
+}
+.dainty {
+  border-radius: 20px;
+}
+.topic {
+  background-size: cover;
+  flex: 1 1 300px;
+  padding: 20px;
+}
+.topic:hover {
+  box-shadow: var(--box-shadow);
+}
+.topic > p {
+  display: block;
+}
+
+/*=== Header-nav ===*/
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--menu-text-color);
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  font-size: 28px;
+  /* font-weight: 400; */
+  color: var(--white-text-color);
+  /* font-family: "Charm"; */
+  font-family: "Marck Script";
+}
+.nav-logo:hover {
+  color: var(--primary-color);
+}
+.nav-logo img {
+  width: 24%;
+  align-items: center;
+}
+.nav-logo > .logo-ideas {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.nav-menu {
+  margin: 0 auto;
+  gap: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 7;
+}
+.nav-item h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+  /* font-family: 'Marck Script'; */
+  color: #fff;
+}
+.nav-item h2:hover {
+  color: var(--primary-color);
+}
+.nav-link:active {
+  color: #fff;
+}
+.nav-link:visited {
+  color: var(--primary-color);
+}
+/*=== Hamburger ===*/
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--white-text-color);
+}
+
+/*========= Hero section ======== */
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/baner/kalamondin.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.hero-text {
+  width: 95%;
+  margin-top: 15px;
+  padding: 1px;
+  color: var(--primary-color);
+  text-align: center;
+  /* font-family: "Charm"; */
+  font-family: "Marck Script";
+  /* font-weight: 400; */
+  text-shadow: 4px 4px rgba(55, 65, 1, 0.651);
+}
+.hero-title h1 {
+  font-size: 110px;
+  margin-top: 60px;
+  /* font-weight: 700; */
+}
+.hero-title h2 {
+  font-size: 80px;
+  margin-top: 60px;
+  /* font-weight: 700; */
+}
+
+/* === Info section === */
+.info-section {
+  width: 100%;
+  background-color: #f5f7df;
+}
+.info {
+  width: 80%;
+  padding: 25px;
+  color: var(--dark-text-color);
+  margin: 0 auto;
+  text-align: center;
+}
+.info-title h2 {
+  text-align: center;
+  font-size: 26px;
+  line-height: calc(36 / 26);
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.info-descript {
+  text-align: justify;
+  justify-content: center;
+}
+.info-descript p {
+  font-size: 22px;
+  line-height: calc(28 / 22);
+  font-weight: 400;
+}
+
+/* ===== Secondary menu ====*/
+.menu-products {
+  display: flex;
+  flex-direction: column;
+}
+.menu-products h3 {
+  font-size: 24px;
+  color: var(--dark-text-color);
+  font-weight: 400;
+}
+.menu-small {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+#menu-secondary ul li a {
+  padding: 2px 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Marck Script";
+  color: #748a05f4;
+  font-size: 40px;
+}
+#menu-secondary ul li a:hover {
+  color: var(--primary-color);
+}
+
+/*=========footer==========*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(116, 138, 5, 0.957);
+  text-align: center;
+  width: 100%;
+  height: 60px;
+}
+.footer-link {
+  z-index: 500;
+  font-size: 14px;
+  color: var(--white-text-color);
+  text-decoration: none;
+  padding: 5px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.copyrigh-text {
+  margin-left: 50px;
+  font-size: 16px;
+}
+
+/*===== Frutis =====*/
+.banner-citrus {
+  background: url(../img/baner/maviya.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/*======= Products tea ======tea */
+.banner-teas {
+  background: url(../img/baner/thay.png) no-repeat center;
+  background-size: cover;
+}
+
+/*======= Products Sweets ======tea */
+.banner-swits {
+  background: url(../img/baner/kumkvat.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/*===== Delivery =====*/
+.container-delivery {
+  width: 100%;
+}
+.banner-delivery {
+  background: url(../img/baner/cvit-sinensis.jpg) no-repeat center;
+  background-size: cover;
+}
+.info-delivery {
+  width: 100%;
+  margin: 0 auto;
+  color: var(--dark-text-color);
+  background-color: var(--grin-background-color);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+.delivery-photo {
+  max-width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.delivery-photo img {
+  max-width: 85%;
+}
+.delivery-description {
+  max-width: 50%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.delivery-text h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.menu-object {
+  width: 100%;
+  padding: 20px 0;
+}
+.menu-object h3 {
+  padding-bottom: 20px;
+  color: var(--dark-text-color);
+}
+.media-network {
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+.menu-delivery a {
+  font-size: 18px;
+}
+.media-network a {
+  color: var(--dark-text-color);
+}
+.menu-pony {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  gap: 20px;
+}
+.menu-pony a {
+  fill: #748a05;
+}
+.menu-icon {
+  font-size: 18px;
+  fill: #748a05;
+  /* fill: var(--dark-text-color); */
+}
+.menu-icon a:hover {
+  fill: #ff7300;
+}
+.menu-pony > :hover {
+  transition: color 0.4s;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+
+}
